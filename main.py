@@ -6,6 +6,7 @@ import shutil
 from typing import List
 from leer_sia_todo import leer_sia
 from leerTodo import leer_carpeta
+import pandas as pd
 
 app = FastAPI()
 
@@ -114,7 +115,7 @@ def get_mayor():
         else:
             k['retOS']=0.0
         k['retTo']= k['retPA']+k['retPe']
-        k['retPP']= k['retTo']-k['retSS']-k['retOS']
+        k['retPP'] = k['retTo']-k['retSS']-k['retOS']
         j.append(k)
     return j
 
